@@ -1,0 +1,81 @@
+.next-page{
+    margin: 5px;
+    padding: 5px 20px;
+    border: 1px solid red;
+    border-radius: 20px;
+    color: #FF1616;
+    position: relative;
+    transition: 0.5s ease-in;
+    z-index: 1;
+}
+
+.next-page:hover{
+    box-shadow: inset 0 100px 0 0 red;
+    color: white;
+    transform: scaleY(1);
+}
+
+.form-box-2{
+    border: 1px solid rgba(128, 128, 128, 0.245);
+    border-radius: 30px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    width: 100% ;
+    height: 45px;
+    margin-bottom: 30px;
+}
+
+.input-search{
+    border: 0px solid rgba(128, 128, 128, 0);
+}
+
+.search-icon{
+    position: absolute;
+    right: 10px;
+}
+
+.product-count{
+    position: relative;
+}
+
+.input-number-decrement{
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    border: 0px !important;
+}
+
+.input-number-increment{
+    position: absolute;
+    right: 70px !important;
+    border: 0px !important;
+    top: 8px !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.input-number, .input-number2{
+    margin-left: 50px !important;
+    width: 0px;
+    padding-left: 43px !important;
+}
+
+.thong-bao{
+    display: none;
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    z-index: 3;
+    align-items: center;
+    color: aliceblue;
+    border-radius: 17px;
+    background-color:rgba(128, 128, 128, 0.522) ;
+    padding: 0px;
+}
+
+.thong-bao div{
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    padding: 30px;
+    border-radius:15px;
+    background-color: rgb(255, 0, 0);
+}

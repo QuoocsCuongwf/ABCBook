@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styleVer2.css">
     <link rel="stylesheet" href="assets/css/search.css">
 </head>
 <body>
@@ -132,35 +133,27 @@
                     <div class="category-listing mb-50">
                         <!-- single one -->
                         <div class="single-listing">
-                            <!-- select-Categories  -->
-                            <div class="select-Categories pb-30">
-                                <div class="small-tittle mb-20">
-                                    <h4>Filter by Genres</h4>
-                                </div>
-                                <label class="container">History
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Horror - Thriller
-                                    <input type="checkbox" checked="checked active">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Love Stories
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Science Fiction
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Biography
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
+                            <div class="header-info-left d-flex align-items-center">
+                                <form action="search.html" class="form-box-2 col-sm-12">
+                                    <input type="text" name="Search" placeholder="Search book by author or publisher" class="input-search">
+                                    <div class="search-icon">
+                                        <i class="ti-search"></i>
+                                    </div>
+                                    <input type="submit" value="" id="submit-search">
+                                </form>
                             </div>
-                            <!-- select-Categories End -->
-
-                            <!-- Range Slider Start -->
+                            <div class="select-job-items2 mb-30">
+                                <div class="col-xl-12">
+                                    <select name="select2">
+                                        <option value="">Renres</option>
+                                        <option value="">History</option>
+                                        <option value="">Horror - Thriller</option>
+                                        <option value="">Love Stories</option>
+                                        <option value="">Science Fiction</option>
+                                        <option value="">Biography</option>
+                                    </select>
+                                </div>
+                            </div>
                             <aside class="left_widgets p_filter_widgets price_rangs_aside sidebar_box_shadow mb-40">
                                 <div class="small-tittle">
                                     <h4>Filter by Price</h4>
@@ -180,76 +173,10 @@
                                 </div>
                             </aside>
                             <!-- range end -->
-
+                             <div class="d-flex justify-content-center">
+                                <a href="search.html" class="btn header-btn">Search</a>
+                             </div>
                             <!-- Select City items start -->
-                            <div class="select-job-items2 mb-30">
-                                <div class="col-xl-12">
-                                    <select name="select2">
-                                        <option value="">Filter by Rating</option>
-                                        <option value="">5 Star Rating</option>
-                                        <option value="">4 Star Rating</option>
-                                        <option value="">3 Star Rating</option>
-                                        <option value="">2 Star Rating</option>
-                                        <option value="">1 Star Rating</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <!--  Select City items End-->
-
-                            <!-- select-Categories start -->
-                            <div class="select-Categories pt-100 pb-60">
-                                <div class="small-tittle mb-20">
-                                    <h4>Filter by Publisher</h4>
-                                </div>
-                                <label class="container">Green Publications
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Anondo Publications
-                                    <input type="checkbox" checked="checked active">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Rinku Publications
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Sheba Publications
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Red Publications
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                            <!-- select-Categories End -->
-                            <!-- select-Categories start -->
-                            <div class="select-Categories">
-                                <div class="small-tittle mb-20">
-                                    <h4>Filter by Author Name</h4>
-                                </div>
-                                <label class="container">Buster Hyman
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Phil Harmonic
-                                    <input type="checkbox" checked="checked active">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Cam L. Toe
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Otto Matic
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Juan Annatoo
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                            <!-- select-Categories End -->
                         </div>
                     </div>
                     <!-- Job Category Listing End -->
@@ -613,15 +540,26 @@
                 </div>
                 <!-- button -->
                 <div class="row">
-                    <div class="col-xl-12">
-                       <div class="row">
-                        <div class="col-sm-6">
-                            <a href="search.html" class="border-btn border-btn2 more-btn1">1</a>
-                            <a href="page-2.html" class="border-btn border-btn2 more-btn2">2</a>
-                            <a href="page-3.html" class="border-btn border-btn2 more-btn2">3</a>
-                        </div>
-                       </div>
-                    </div>
+                    <nav class="blog-pagination justify-content-center d-flex">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a href="search.html" class="page-link" aria-label="Previous">
+                                    <i class="ti-angle-left"></i>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a href="search.html" class="page-link">1</a>
+                            </li>
+                            <li class="page-item active">
+                                <a href="page-2.html" class="page-link">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a href="page-3.html" class="page-link" aria-label="Next">
+                                    <i class="ti-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
