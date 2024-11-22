@@ -1,0 +1,93 @@
+/* Định dạng chung cho trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Định dạng cho danh sách sản phẩm */
+#productList {
+    list-style: none; /* Bỏ dấu chấm đầu dòng */
+    padding: 0;
+    margin: 0;
+}
+
+/* Định dạng cho mỗi sản phẩm */
+.product-item {
+    display: flex; /* Hiển thị các thành phần trong mỗi sản phẩm theo chiều ngang */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    justify-content: space-between; /* Giãn cách các phần tử ra, nút bên phải */
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease; /* Thêm hiệu ứng khi hover */
+}
+
+/* Định dạng cho phần chứa hình ảnh, tên và giá sản phẩm */
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Tăng khoảng cách giữa hình ảnh và thông tin sản phẩm */
+}
+
+/* Định dạng cho hình ảnh của sản phẩm */
+.product-item img {
+    width: 60px; /* Kích thước hình thu nhỏ */
+    height: 90px;
+    object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng */
+    border-radius: 5px;
+}
+
+/* Định dạng cho phần thông tin tên và giá sản phẩm */
+.product-info div {
+    display: flex;
+    flex-direction: column; /* Để tên sản phẩm và giá nằm dọc */
+}
+
+/* Định dạng cho tên sản phẩm */
+.product-item strong {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Định dạng cho giá sản phẩm */
+.product-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Định dạng cho các nút (Sửa và Xóa) */
+.btn-container {
+    display: flex;
+    justify-content: flex-end; /* Căn chỉnh các nút về bên phải */
+    gap: 10px; /* Khoảng cách giữa hai nút */
+}
+
+.btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Đổi màu nền khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ nút khi hover */
+}
+
+.btn:active {
+    background-color: #004085; /* Đổi màu nền khi nút đang được nhấn */
+    transform: scale(1); /* Đảm bảo kích thước nút không thay đổi khi nhấn */
+}
+
+/* Thêm hiệu ứng hover cho từng item trong danh sách sản phẩm */
+.product-item:hover {
+    background-color: #f1f1f1; /* Thay đổi màu nền khi hover vào sản phẩm */
+}
