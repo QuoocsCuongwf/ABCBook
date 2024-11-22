@@ -1,0 +1,18 @@
+.next-page{
+    margin: 5px;
+    padding: 5px 20px;
+    border: 1px solid red;
+    border-radius: 20px;
+    color: #FF1616;
+    position: relative;
+    transition: 0.5s ease-in;
+    z-index: 1;
+}
+
+.next-page:hover{
+    box-shadow: inset 0 100px 0 0 red;
+    color: white;
+    transform: scaleY(1);
+}
+
+
