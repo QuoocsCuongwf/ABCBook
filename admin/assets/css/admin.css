@@ -80,7 +80,7 @@ li {
 
 .admin-content-main-content{
     display: grid;
-    grid-template-columns: 80%;
+    grid-template-columns: 100%;
     padding: 12px;
 }
 
