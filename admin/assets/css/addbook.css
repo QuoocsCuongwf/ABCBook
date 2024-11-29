@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     gap: 2px;
-    width: 300px;
+    width: 600px;
     margin: 0 auto;
 }
 
@@ -28,4 +28,36 @@
     width: 100%;
     box-sizing: border-box;
     margin-top: 2px;
+}
+
+.product-item{
+    display: flex;
+}
+.product-item .btn{
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100px;
+    height: 40px;
+}
+
+.product-item .name{
+    width: 300px;
+    margin-left: 20px;
+    font-size: 30px;
+}
+.product-item .price{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 90px;
+}
+#addProductForm{
+    z-index: 10;
+    display: none;
+    position: absolute;
+    margin: 0px auto;
+    top: 111px;
+    left: 30%;
+    border: 1px solid gray;
 }

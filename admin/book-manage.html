@@ -29,55 +29,9 @@
     <link rel="stylesheet" href="assets/css/admin.css">
 </head>
 <body>
-    <header>
-        <div class="header-area">
-           <div class="main-header ">
-               <div class="header-top ">
-                <div class="container">
-                 <div class="row">
-                    <div class="col-xl-12">
-                        <div class="d-flex justify-content-between align-items-center flex-sm">
-                            <div class="header-info-left d-flex align-items-center">
-                                <!-- logo -->
-                                <div class="logo">
-                                    <a href="index-2.html"><img src="assets/img/logo/logo.png" alt=""></a>
-                                </div>
-                                <!-- Search Box -->
-                                <form action="search.html" class="form-box">
-                                    <input type="text" name="Search" placeholder="Search book by author or publisher">
-                                    <div class="search-icon">
-                                        <i class="ti-search"></i>
-                                    </div>
-                                    <input type="submit" value="" id="submit-search">
-                                </form>
-                            </div>
-                            <div class="header-info-right d-flex align-items-center">
-                                <ul>                                   
-                                    <li><a href="#">FAQ</a></li>
-                                    <li><a href="#">Track Order</a></li>
-                                    <li class="shopping-card">
-                                        <a href="cart.html"><img src="assets/img/icon/cart.svg" alt=""></a>
-                                    </li>
-                                    <li><a href="login.html" class="btn header-btn">Sign in</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-                   
-    </div>
-</div>
-</div>
-</header>
-
 <main>
-    <h1>Books Manage</h1>
-
     <!-- Form Add Book -->
-    <h2>Add Book</h2>
-    <form id="addProductForm" onsubmit="addProduct(event)">
+    <form id="addProductForm" onsubmit="addProduct(event)" >
         <label for="book-name">Book's Title: </label>
         <input type="text" id="book-name" required><br>
     
@@ -114,11 +68,108 @@
         <button type="submit" class="btn">Add Book</button>
     </form>
     
-
-    <div class="product-list">
-        <h2>List Of Books</h2>
-        <ul id="productList"></ul>
-    </div>
+    <section class="admin">
+        <div class="row-grid">
+            <div class="admin-sidebar">
+                <div class="admin-sidebar-top">
+                    <div class="logo">
+                        <img src="assets/img/logo/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="admin-sidebar-content" style="position: sticky;">
+                    <ul style="position:sticky;">
+                        <li>
+                            <a href="admin.html"><i class='bx bxs-home-alt-2' ></i></i>Home</a>
+                        </li>
+                        <li>
+                            <a href="oderlist.html"><i class='bx bxs-cart'></i>Admin Cart</a>
+                        </li>
+                        <li>
+                            <a href="customer.html"><i class='bx bxs-user'></i>Customer</a>
+                        </li>
+                        <li>
+                            <a href=""><i class='bx bxs-book'></i>Book</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="admin-content">
+                <div class="admin-content-top">
+                    <div class="header-area">
+                        <div class="main-header ">
+                            <div class="header-top ">
+                             <div class="container">
+                              <div class="row">
+                                 <div class="col-xl-12">
+                                     <div class="d-flex justify-content-between align-items-center flex-sm">
+                                         <div class="header-info-left d-flex align-items-center">
+                                             <!-- logo -->
+                                             <!--<div class="logo">
+                                                 <a href="index-2.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                             </div>-->
+                                             <!-- Search Box -->
+                                             <form action="search.html" class="form-box">
+                                                 <input type="text" name="Search" placeholder="Search book by author or publisher">
+                                                 <div class="search-icon">
+                                                     <i class="ti-search"></i>
+                                                 </div>
+                                                 <input type="submit" value="" id="submit-search">
+                                             </form>
+                                         </div>
+                                         <div class="header-info-right d-flex align-items-center">
+                                             <ul>                                   
+                                                 <li><a href="#">FAQ</a></li>
+                                                 <li><a href="#">Track Order</a></li>
+                                                 <li class="shopping-card">
+                                                     <a href="cart.html"><img src="assets/img/icon/cart.svg" alt=""></a>
+                                                 </li>
+                                                 <li><a href="login.html" class="btn header-btn">sign out</a></li>
+                                             </ul>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+                <div class="admin-content-main">
+                    <div class="order-management-container">
+                        <div class="order-header">
+                            <div class="admin-content-main-title">
+                                <h1>List of books</h1>
+                            </div>
+                            <button class="btn" id="add-book">Add book</button>
+                        </div>
+                        <div class="product-list">
+                            <ul id="productList"></ul>
+                        </div>
+                        <div class="row">
+                            <nav class="blog-pagination justify-content-center d-flex">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a href="search.html" class="page-link" aria-label="Previous">
+                                            <i class="ti-angle-left"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="search.html" class="page-link">1</a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a href="page-2.html" class="page-link">2</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="page-3.html" class="page-link" aria-label="Next">
+                                            <i class="ti-angle-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer>
@@ -217,12 +268,51 @@
 
 <!-- JS here -->
 <script>
+const addBook=document.getElementById('add-book');
+addBook.addEventListener('click',()=>{
+    const formAddBook=document.getElementById('addProductForm');
+    formAddBook.style.display='block'
+})
+
 let products = [
     {
         name: "The Rage of Dragons",
         price: 50.00,
         image: "assets/img/gallery/best-books1.jpg",
         author: "Evan Winter",
+        description: "This is a sample book description.",
+        inforAuthor: "Information about the author.",
+        comments: "Sample comments.",
+        review: "Sample review.",
+        genre: "Fiction"
+    },
+    {
+        name: "Moon Dance",
+        price: 50.00,
+        image: "assets/img/gallery/best_selling1.jpg",
+        author: "Moon Dance",
+        description: "This is a sample book description.",
+        inforAuthor: "Information about the author.",
+        comments: "Sample comments.",
+        review: "Sample review.",
+        genre: "Fiction"
+    },
+    {
+        name: "Very Nice",
+        price: 50.00,
+        image: "assets/img/gallery/best_selling2.jpg",
+        author: "Moon Dance",
+        description: "This is a sample book description.",
+        inforAuthor: "Information about the author.",
+        comments: "Sample comments.",
+        review: "Sample review.",
+        genre: "Fiction"
+    },
+    {
+        name: "Evanesce",
+        price: 50.00,
+        image: "assets/img/gallery/best_selling3.jpg",
+        author: "Moon Dance",
         description: "This is a sample book description.",
         inforAuthor: "Information about the author.",
         comments: "Sample comments.",
@@ -295,8 +385,9 @@ function renderProducts() {
 
         // Display only name, price, and image for each book
         li.innerHTML = `
-            ${product.image ? `<img src="${product.image}" alt="${product.name}" style="width: 100px; height: auto;">` : ''}
-            <strong>${product.name}</strong> - ${product.price} $
+            ${product.image ? `<img src="${product.image}" alt="${product.name}" style="width: 200px; height: auto;">` : ''}
+            <p class="name">${product.name}</p> 
+            <p class="price"> ${product.price} </p>
             <a href="file:///C:/Users/Admin/Desktop/ABCBook-main/book-details.html" class="btn" target="_blank">Details</a>
             <button class="btn" onclick="editProduct(${index})">Edit</button>
             <button class="btn" onclick="deleteProduct(${index})">Delete</button>
