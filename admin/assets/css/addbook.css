@@ -1,32 +1,31 @@
-/* Định dạng cho form thêm sách */
 #addProductForm {
     background-color: #fff;
-    padding: 15px; /* Giảm padding trong form */
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    gap: 0px; /* Giảm khoảng cách giữa các ô nhập */
+    gap: 2px;
     width: 300px;
-    margin: 0 auto; /* Căn giữa biểu mẫu trên màn hình */
+    margin: 0 auto;
 }
 
-/* Định dạng cho label (tiêu đề của các ô nhập) */
 #addProductForm label {
     font-size: 14px;
     color: #333;
-    font-weight: bold; /* Định dạng đậm cho tiêu đề */
+    font-weight: bold;
 }
 
-/* Định dạng cho các ô input */
 #addProductForm input[type="text"],
 #addProductForm input[type="number"],
-#addProductForm input[type="file"] {
-    padding: 8px; /* Giảm padding của các ô nhập */
+#addProductForm input[type="file"],
+#addProductForm textarea,
+#addProductForm select {
+    padding: 8px;
     font-size: 14px;
     border: 1px solid #ccc;
-    border-radius: 5px; /* Góc tròn cho các ô nhập */
-    width: 100%; /* Chiếm toàn bộ chiều rộng của form */
-    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi chiều rộng */
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
     margin-top: 2px;
 }
