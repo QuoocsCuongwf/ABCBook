@@ -71,35 +71,56 @@
 </div>
 </div>
 </header>
+
 <main>
     <h1>Books Manage</h1>
 
-    <!-- Form Thêm Sản Phẩm -->
+    <!-- Form Add Book -->
     <h2>Add Book</h2>
     <form id="addProductForm" onsubmit="addProduct(event)">
-        <label for="productName">Book's Title: </label>
-        <input type="text" id="productName" required><br><br>
-
-        <label for="productPrice">Price: </label>
-        <input type="number" id="productPrice" required><br><br>
-
-        <label for="productImage">Book's Cover: </label>
-        <input type="file" id="productImage"><br><br>
-
-        <button type="submit" class="btn">Add</button>
+        <label for="book-name">Book's Title: </label>
+        <input type="text" id="book-name" required><br>
+    
+        <label for="author">Author: </label>
+        <input type="text" id="author" required><br>
+    
+        <label for="price">Price: </label>
+        <input type="number" id="price" required><br>
+    
+        <label for="genres">Genre: </label>
+        <select id="genres">
+            <option value="1">History</option>
+            <option value="2">Horror - Thriller</option>
+            <option value="3">Biography</option>
+            <option value="4">Love Stories</option>
+            <option value="5">Science Fiction</option>
+        </select><br>
+    
+        <label for="image">Book's Cover: </label>
+        <input type="file" id="image" class="full-width"><br>
+    
+        <label for="description">Description: </label>
+        <textarea id="description" class="full-width" required></textarea><br>
+    
+        <label for="infor-author">Author Info: </label>
+        <textarea id="infor-author" class="full-width"></textarea><br>
+    
+        <label for="comments">Comments: </label>
+        <textarea id="comments" class="full-width"></textarea><br>
+    
+        <label for="review">Review: </label>
+        <textarea id="review" class="full-width"></textarea><br>
+    
+        <button type="submit" class="btn">Add Book</button>
     </form>
+    
 
     <div class="product-list">
         <h2>List Of Books</h2>
-        <li class="product-item">                
-            <img src="assets/img/gallery/best-books1.jpg" alt="The Rage of Dragons">
-            <strong>The Rage of Dragons</strong> - 50 $
-            <button class="btn" onclick="editProduct(2)">Edit</button>
-            <button class="btn" onclick="deleteProduct(2)">Delete</button>
-        </li>
         <ul id="productList"></ul>
     </div>
 </main>
+
 <footer>
     <div class="footer-wrappper section-bg">
        <div class="footer-area footer-padding">
@@ -196,109 +217,177 @@
 
 <!-- JS here -->
 <script>
-    let products = []; 
+let products = [
+    {
+        name: "The Rage of Dragons",
+        price: 50.00,
+        image: "assets/img/gallery/best-books1.jpg",
+        author: "Evan Winter",
+        description: "This is a sample book description.",
+        inforAuthor: "Information about the author.",
+        comments: "Sample comments.",
+        review: "Sample review.",
+        genre: "Fiction"
+    }
+]; 
 
-    function addProduct(event) {
-        event.preventDefault();
+// Function to add a product/book
+function addProduct(event) {
+    event.preventDefault();
 
-        const name = document.getElementById("productName").value;
-        const price = document.getElementById("productPrice").value;
-        const image = document.getElementById("productImage").files[0];
+    const name = document.getElementById("book-name").value;
+    const price = document.getElementById("price").value;
+    const image = document.getElementById("image").files[0];
+    const author = document.getElementById("author").value;
+    const description = document.getElementById("description").value;
+    const inforAuthor = document.getElementById("infor-author").value;
+    const comments = document.getElementById("comments").value;
+    const review = document.getElementById("review").value;
+    const genre = document.getElementById("genres").value;
 
-        if (image) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                const product = {
-                    name: name,
-                    price: price,
-                    image: e.target.result
-                };
-                products.push(product);
-                renderProducts();
-            };
-            reader.readAsDataURL(image);
-        } else {
+    // If there is an image, use FileReader to read it as base64
+    if (image) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
             const product = {
                 name: name,
                 price: price,
-                image: ''
+                image: e.target.result,
+                author: author,
+                description: description,
+                inforAuthor: inforAuthor,
+                comments: comments,
+                review: review,
+                genre: genre
             };
             products.push(product);
             renderProducts();
-        }
-
-        document.getElementById("addProductForm").reset();
-    }
-
-    function renderProducts() {
-        const productList = document.getElementById("productList");
-        productList.innerHTML = '';
-
-        products.forEach((product, index) => {
-            const li = document.createElement("li");
-            li.classList.add("product-item");
-
-            li.innerHTML = `
-                ${product.image ? `<img src="${product.image}" alt="${product.name}">` : ''}
-                <strong>${product.name}</strong> - ${product.price} $
-                <button class="btn" onclick="editProduct(${index})">Edit</button>
-                <button class="btn" onclick="deleteProduct(${index})">Delete</button>
-            `;
-
-            productList.appendChild(li);
-        });
-    }
-
-    function editProduct(index) {
-        const product = products[index];
-        document.getElementById("productName").value = product.name;
-        document.getElementById("productPrice").value = product.price;
-        document.getElementById("productImage").value = '';
-
-        const form = document.getElementById("addProductForm");
-        form.onsubmit = function(event) {
-            event.preventDefault();
-            updateProduct(index);
         };
+        reader.readAsDataURL(image);
+    } else {
+        const product = {
+            name: name,
+            price: price,
+            image: '',
+            author: author,
+            description: description,
+            inforAuthor: inforAuthor,
+            comments: comments,
+            review: review,
+            genre: genre
+        };
+        products.push(product);
+        renderProducts();
     }
 
-    function updateProduct(index) {
-        const name = document.getElementById("productName").value;
-        const price = document.getElementById("productPrice").value;
-        const image = document.getElementById("productImage").files[0];
+    // Reset the form after adding a product
+    document.getElementById("addProductForm").reset();
+}
 
-        if (image) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                products[index] = {
-                    name: name,
-                    price: price,
-                    image: e.target.result
-                };
-                renderProducts();
-            };
-            reader.readAsDataURL(image);
-        } else {
+// Function to render all books in the list
+function renderProducts() {
+    const productList = document.getElementById("productList");
+    productList.innerHTML = '';  // Clear current list
+
+    products.forEach((product, index) => {
+        const li = document.createElement("li");
+        li.classList.add("product-item");
+
+        // Display only name, price, and image for each book
+        li.innerHTML = `
+            ${product.image ? `<img src="${product.image}" alt="${product.name}" style="width: 100px; height: auto;">` : ''}
+            <strong>${product.name}</strong> - ${product.price} $
+            <a href="file:///C:/Users/Admin/Desktop/ABCBook-main/book-details.html" class="btn" target="_blank">Details</a>
+            <button class="btn" onclick="editProduct(${index})">Edit</button>
+            <button class="btn" onclick="deleteProduct(${index})">Delete</button>
+        `;
+
+        productList.appendChild(li);
+    });
+}
+
+// edit a book
+function editProduct(index) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const product = products[index];
+    document.getElementById("book-name").value = product.name;
+    document.getElementById("price").value = product.price;
+    document.getElementById("image").value = '';
+    document.getElementById("author").value = product.author;
+    document.getElementById("description").value = product.description;
+    document.getElementById("infor-author").value = product.inforAuthor;
+    document.getElementById("comments").value = product.comments;
+    document.getElementById("review").value = product.review;
+    document.getElementById("genres").value = product.genre;
+
+    const form = document.getElementById("addProductForm");
+    form.onsubmit = function(event) {
+        event.preventDefault();
+        updateProduct(index);
+    };
+}
+
+// update a book's details
+function updateProduct(index) {
+    const name = document.getElementById("book-name").value;
+    const price = document.getElementById("price").value;
+    const image = document.getElementById("image").files[0];
+    const author = document.getElementById("author").value;
+    const description = document.getElementById("description").value;
+    const inforAuthor = document.getElementById("infor-author").value;
+    const comments = document.getElementById("comments").value;
+    const review = document.getElementById("review").value;
+    const genre = document.getElementById("genres").value;
+
+    if (image) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
             products[index] = {
                 name: name,
                 price: price,
-                image: products[index].image
+                image: e.target.result,
+                author: author,
+                description: description,
+                inforAuthor: inforAuthor,
+                comments: comments,
+                review: review,
+                genre: genre
             };
             renderProducts();
-        }
-
-        document.getElementById("addProductForm").reset();
-        const form = document.getElementById("addProductForm");
-        form.onsubmit = addProduct;
+        };
+        reader.readAsDataURL(image);
+    } else {
+        products[index] = {
+            name: name,
+            price: price,
+            image: products[index].image,
+            author: author,
+            description: description,
+            inforAuthor: inforAuthor,
+            comments: comments,
+            review: review,
+            genre: genre
+        };
+        renderProducts();
     }
 
-    function deleteProduct(index) {
-        const confirmDelete = confirm("Bạn có chắc chắn muốn xóa sản phẩm này?");
-        if (confirmDelete) {
-            products.splice(index, 1);
-            renderProducts();
-        }
+    document.getElementById("addProductForm").reset();
+    const form = document.getElementById("addProductForm");
+    form.onsubmit = addProduct;
+}
+
+// delete a book
+function deleteProduct(index) {
+    const confirmDelete = confirm("Are you sure you want to delete this book?");
+    if (confirmDelete) {
+        products.splice(index, 1);
+        renderProducts();
     }
+}
+
+window.onload = function() {
+    renderProducts();
+};
 </script>
 <!-- Jquery, Popper, Bootstrap -->
 <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
