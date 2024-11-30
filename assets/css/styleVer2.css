@@ -79,3 +79,9 @@
     border-radius:15px;
     background-color: rgb(255, 0, 0);
 }
+
+.history-order th, .history-order td {
+    text-align: center; /* Căn giữa nội dung */
+    vertical-align: middle; /* Căn giữa theo chiều dọc */
+    padding: 10px; /* Khoảng cách bên trong ô */
+}

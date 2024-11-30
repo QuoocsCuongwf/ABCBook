@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
 
-<!-- Mirrored from preview.colorlib.com/theme/abcbook/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Nov 2024 04:25:34 GMT -->
+<!-- Mirrored from preview.colorlib.com/theme/abcbook/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Nov 2024 04:25:34 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/styleVer2.css">
     <link rel="stylesheet" href="assets/css/search.css">
 </head>
 <body>
@@ -55,7 +54,7 @@
                                     <li class="shopping-card">
                                         <a href="cart.html"><img src="assets/img/icon/cart.svg" alt=""></a>
                                     </li>
-                                    <li><a href="login.html" class="btn header-btn">Sign in</a></li>
+                                    <li><a href="index.html" class="btn header-btn">Sign out</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -115,7 +114,7 @@
                 <div class="slider-area">
                     <div class="slider-height2 slider-bg5 d-flex align-items-center justify-content-center">
                         <div class="hero-caption hero-caption2">
-                            <h2>Order Detail</h2>
+                            <h2>Order details</h2>
                         </div>
                     </div>
                 </div>
@@ -123,12 +122,14 @@
         </div> 
     </div>
     <!--  Hero area End -->
-    <!--================Cart Area =================-->
-    <section class="cart_area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="cart_inner col-lg-8">
-                    <div class="table-responsive">
+
+    <!--? Checkout Area Start-->
+    <section class="checkout_area section-padding">
+        <div class="container">            
+            <div class="billing_details">
+                <div class="row">
+                    <div class="cart_inner col-lg-8">
+                        <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -154,9 +155,7 @@
                                         <h5>$360.00</h5>
                                     </td>
                                     <td>
-                                        <div class="product_count d-flex">
-                                           <span>1</span>
-                                        </div>
+                                        <h5>2</h5>
                                     </td>
                                     <td>
                                         <h5>$720.00</h5>
@@ -177,22 +176,9 @@
                                         <h5>$360.00</h5>
                                     </td>
                                     <td>
-                                        <div class="product_count d-flex">
-                                            <span>2</span>
-                                        </div>
-                                    </td>
+                                        <h5>2</h5>
                                     <td>
                                         <h5>$720.00</h5>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td>
-                                        <h5>Subtotal</h5>
-                                    </td>
-                                    <td>
-                                        <h5>$2160.00</h5>
                                     </td>
                                 </tr>
                             </tbody>
@@ -267,29 +253,16 @@
                                 <a href="#">Total<span>$2210.00</span>
                                 </a>
                             </li>
-                            <li>
-                                <div style="width: 360px; height: 30px; margin-top: 20px;">
-                                    <select class="Status col-sm-3" >
-                                        <option value="1">Complete</option>
-                                        <option value="2">Cancel</option>
-                                        <option value="3">Shipping</option>
-                                        <option value="4">Processing</option>
-                                    </select>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <a href="" class="btn" style="padding: 1px;">Save</a>
-                                    <a href="oderlist.html" class="btn"style="padding: 1px">Exit</a>
-                                </a>
-                            </li>
+                            <a href="" class="btn col-md-12" style="margin-top: 10px;">Cancel order</a>
                         </ul>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--================End Cart Area =================-->
+    <!--End Checkout Area -->
+
 </main>
 <footer>
     <div class="footer-wrappper section-bg">
@@ -323,11 +296,11 @@
                        <div class="footer-tittle">
                            <h4>Book Category</h4>
                            <ul>  
-                               <li><a href="categories.htmls">History</a></li>
-                               <li><a href="categories.htmls">Horror - Thriller</a></li>
-                               <li><a href="categories.htmls">Love Stories</a></li>
-                               <li><a href="categories.htmls">Science Fiction</a></li>
-                               <li><a href="categories.htmls">Business</a></li>
+                               <li><a href="#">History</a></li>
+                               <li><a href="#">Horror - Thriller</a></li>
+                               <li><a href="#">Love Stories</a></li>
+                               <li><a href="#">Science Fiction</a></li>
+                               <li><a href="#">Business</a></li>
                            </ul>
                        </div>
                    </div>
@@ -370,13 +343,13 @@
            <div class="row d-flex align-items-center">
                <div class="col-xl-12 ">
                    <div class="footer-copy-right text-center">
-                       Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com/" style="color: black"target="_blank" rel="nofollow noopener">Colorlib</a>
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com/" style="color: black" target="_blank" rel="nofollow noopener">Colorlib</a>
 
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 </div>
 </footer>
@@ -425,8 +398,8 @@
 
   gtag('config', 'UA-23581568-13');
 </script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8dc15b96d866a906","version":"2024.10.4","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"cd0b4b3a733644fc843ef0b185f98241","b":1}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8dc15ba7aa2fa90f","version":"2024.10.4","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"cd0b4b3a733644fc843ef0b185f98241","b":1}' crossorigin="anonymous"></script>
 </body>
 
-<!-- Mirrored from preview.colorlib.com/theme/abcbook/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Nov 2024 04:25:34 GMT -->
+<!-- Mirrored from preview.colorlib.com/theme/abcbook/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Nov 2024 04:25:35 GMT -->
 </html>

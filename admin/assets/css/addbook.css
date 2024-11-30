@@ -7,7 +7,6 @@
     flex-direction: column;
     gap: 2px;
     width: 600px;
-    margin: 0 auto;
 }
 
 #addProductForm label {
@@ -52,12 +51,24 @@
     margin-left: 30px;
     margin-right: 90px;
 }
-#addProductForm{
+#addProductForm {
     z-index: 10;
-    display: none;
     position: absolute;
-    margin: 0px auto;
-    top: 111px;
-    left: 30%;
+    left: 50%;
+    top:112px;
+    transform: translateX(-50%);
     border: 1px solid gray;
+}
+
+.add-book-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2500px;
+    display: none; /* Thay đổi từ none thành flex để hiển thị */
+    background-color: rgba(63, 63, 63, 0.464); /* Màu nền mờ */
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
 }

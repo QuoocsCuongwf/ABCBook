@@ -31,42 +31,45 @@
 <body>
 <main>
     <!-- Form Add Book -->
-    <form id="addProductForm" onsubmit="addProduct(event)" >
-        <label for="book-name">Book's Title: </label>
-        <input type="text" id="book-name" required><br>
+    <div class="add-book-form">
+        </form><form id="addProductForm" onsubmit="addProduct(event)" >
+            <label for="book-name">Book's Title: </label>
+            <input type="text" id="book-name" required><br>
+        
+            <label for="author">Author: </label>
+            <input type="text" id="author" required><br>
+        
+            <label for="price">Price: </label>
+            <input type="number" id="price" required><br>
+        
+            <label for="genres">Genre: </label>
+            <select id="genres">
+                <option value="1">History</option>
+                <option value="2">Horror - Thriller</option>
+                <option value="3">Biography</option>
+                <option value="4">Love Stories</option>
+                <option value="5">Science Fiction</option>
+            </select><br>
+        
+            <label for="image">Book's Cover: </label>
+            <input type="file" id="image" class="full-width"><br>
+        
+            <label for="description">Description: </label>
+            <textarea id="description" class="full-width" required></textarea><br>
+        
+            <label for="infor-author">Author Info: </label>
+            <textarea id="infor-author" class="full-width"></textarea><br>
+        
+            <label for="comments">Comments: </label>
+            <textarea id="comments" class="full-width"></textarea><br>
+        
+            <label for="review">Review: </label>
+            <textarea id="review" class="full-width"></textarea><br>
+        
+            <button type="submit" class="btn" id="close-form">Add Book</button>
+        </form>
+    </div>
     
-        <label for="author">Author: </label>
-        <input type="text" id="author" required><br>
-    
-        <label for="price">Price: </label>
-        <input type="number" id="price" required><br>
-    
-        <label for="genres">Genre: </label>
-        <select id="genres">
-            <option value="1">History</option>
-            <option value="2">Horror - Thriller</option>
-            <option value="3">Biography</option>
-            <option value="4">Love Stories</option>
-            <option value="5">Science Fiction</option>
-        </select><br>
-    
-        <label for="image">Book's Cover: </label>
-        <input type="file" id="image" class="full-width"><br>
-    
-        <label for="description">Description: </label>
-        <textarea id="description" class="full-width" required></textarea><br>
-    
-        <label for="infor-author">Author Info: </label>
-        <textarea id="infor-author" class="full-width"></textarea><br>
-    
-        <label for="comments">Comments: </label>
-        <textarea id="comments" class="full-width"></textarea><br>
-    
-        <label for="review">Review: </label>
-        <textarea id="review" class="full-width"></textarea><br>
-    
-        <button type="submit" class="btn">Add Book</button>
-    </form>
     
     <section class="admin">
         <div class="row-grid">
@@ -79,7 +82,10 @@
                 <div class="admin-sidebar-content" style="position: sticky;">
                     <ul style="position:sticky;">
                         <li>
-                            <a href="admin.html"><i class='bx bxs-home-alt-2' ></i></i>Home</a>
+                            <a href="dashboard-product.html"><i class='bx bxs-home-alt-2' ></i></i>Dashboard Products</a>
+                        </li>
+                        <li>
+                            <a href="dashboard-customer.html"><i class='bx bxs-home-alt-2' ></i></i>Dashboard Customer</a>
                         </li>
                         <li>
                             <a href="oderlist.html"><i class='bx bxs-cart'></i>Admin Cart</a>
@@ -270,9 +276,19 @@
 <script>
 const addBook=document.getElementById('add-book');
 addBook.addEventListener('click',()=>{
-    const formAddBook=document.getElementById('addProductForm');
-    formAddBook.style.display='block'
+
+    const formAddBook=document.getElementsByClassName('add-book-form');
+    formAddBook[0].style.display='block'
+    formAddBook[0].style.opacity='1'
 })
+
+const closeForm=document.getElementById('close-form');
+closeForm.addEventListener('click',()=>{
+    const formAddBook=document.getElementsByClassName('add-book-form');
+    formAddBook[0].style.display='none'
+})
+
+// List of books
 
 let products = [
     {
@@ -372,6 +388,9 @@ function addProduct(event) {
 
     // Reset the form after adding a product
     document.getElementById("addProductForm").reset();
+    //Hide form after adding a product
+    const addBookForm=document.getElementsByClassName("add-book-form")
+    addBookForm[0].style.display='none'
 }
 
 // Function to render all books in the list
@@ -388,8 +407,8 @@ function renderProducts() {
             ${product.image ? `<img src="${product.image}" alt="${product.name}" style="width: 200px; height: auto;">` : ''}
             <p class="name">${product.name}</p> 
             <p class="price"> ${product.price} </p>
-            <a href="file:///C:/Users/Admin/Desktop/ABCBook-main/book-details.html" class="btn" target="_blank">Details</a>
-            <button class="btn" onclick="editProduct(${index})">Edit</button>
+            <a href="book-details-2.html" class="btn" target="_blank">Details</a>
+            <a href="book.html" class="btn" onclick="editProduct(${index})">Edit</a>
             <button class="btn" onclick="deleteProduct(${index})">Delete</button>
         `;
 
@@ -463,8 +482,6 @@ function updateProduct(index) {
     }
 
     document.getElementById("addProductForm").reset();
-    const form = document.getElementById("addProductForm");
-    form.onsubmit = addProduct;
 }
 
 // delete a book
