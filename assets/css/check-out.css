@@ -1,0 +1,36 @@
+#successfull{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    color: aliceblue;
+    border-radius: 17px;
+    background-color:rgba(128, 128, 128, 0.522) ;
+    padding: 0px;
+}
+
+#successfull div{
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    top: 30%;
+    bottom: 50%;
+    transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 40%;
+    height: 30%;
+    gap: 20px;
+    justify-items: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    padding: 30px;
+    border-radius:15px;
+    background-color: rgb(255, 255, 255);
+}

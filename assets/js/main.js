@@ -294,3 +294,17 @@
 
 
 })(jQuery);
+
+
+const buy = document.getElementById('buy');
+buy.addEventListener('click', () => {
+    const successful = document.getElementById('successfull');  
+    successful.style.display='block'; 
+    successful.innerHTML +=  `
+    <div>
+    <h2>Thank you for your purchase</h2>
+    <a href="index-2.html" class="btn" style="margin-top: 40px">Back to Home</a>
+    <a href="history-order.html" class="btn" style="margin-top: 40px">History Order</a>
+    </div>
+  `;
+});

@@ -2,7 +2,6 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
 }
 
 table {
@@ -116,6 +115,7 @@ a.confirm-link {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  padding: 20px;
 }
 
 .customer-table th, .customer-table td {
@@ -192,4 +192,13 @@ a.confirm-link {
   text-decoration: none;
   padding: 10px 15px;
   border-radius: 5px;
+}
+
+
+.customer-management-container {
+    padding: 20px !important;
+}
+
+.admin-content-main-content{
+    padding: 0px !important;
 }

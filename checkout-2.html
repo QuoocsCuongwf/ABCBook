@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/check-out.css">
     <link rel="stylesheet" href="assets/css/search.css">
 </head>
 <body>
@@ -269,13 +270,16 @@
                                 <input type="checkbox" id="f-option8" name="selector" />
                                 <label for="f-option8">I’ve read and accept the  <a href="#">terms & conditions*</a> </label>
                             </div>
-                            <a class="btn w-100" href="#">Proceed to Paypal</a>
+                            <div class="btn w-100" id="buy">Proceed to Paypal</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+            <div id="successfull">
+
+            </div>
     <!--End Checkout Area -->
 
 </main>
@@ -406,7 +410,7 @@
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
+
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());

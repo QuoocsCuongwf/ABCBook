@@ -53,9 +53,9 @@
                                     <li><a href="#">FAQ</a></li>
                                     <li><a href="history-order.html">History Order</a></li>
                                     <li class="shopping-card">
-                                        <a href="cart.html"><img src="assets/img/icon/cart.svg" alt=""></a>
+                                        <a href="cart-2.html"><img src="assets/img/icon/cart.svg" alt=""></a>
                                     </li>
-                                    <li><a href="categories.html" class="btn header-btn">Sign out</a></li>
+                                    <li><a href="index.html" class="btn header-btn">Sign out</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -82,7 +82,7 @@
                                     <ul class="submenu">
                                         <li><a href="login.html">login</a></li>
                                         <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="checkout-2.html">Checkout</a></li>
+                                        <li><a href="checkout.html">Checkout</a></li>
                                         <li><a href="book-details.html">book Details</a></li>
                                         <li><a href="blog_details.html">Blog Details</a></li>
                                         <li><a href="elements.html">Element</a></li>
@@ -115,7 +115,7 @@
                 <div class="slider-area">
                     <div class="slider-height2 slider-bg4 d-flex align-items-center justify-content-center">
                         <div class="hero-caption hero-caption2">
-                            <h2>Book Category</h2>
+                            <h2>Categories</h2>
                         </div>
                     </div>
                 </div>
@@ -133,35 +133,27 @@
                     <div class="category-listing mb-50">
                         <!-- single one -->
                         <div class="single-listing">
-                            <!-- select-Categories  -->
-                            <div class="select-Categories pb-30">
-                                <div class="small-tittle mb-20">
-                                    <h4>Filter by Genres</h4>
-                                </div>
-                                <label class="container">History
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Horror - Thriller
-                                    <input type="checkbox" checked="checked active">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Love Stories
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Science Fiction
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Biography
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
+                            <div class="header-info-left d-flex align-items-center">
+                                <form action="search.html" class="form-box-2 col-sm-12">
+                                    <input type="text" name="Search" placeholder="Search book by author or publisher" class="input-search">
+                                    <div class="search-icon">
+                                        <i class="ti-search"></i>
+                                    </div>
+                                    <input type="submit" value="" id="submit-search">
+                                </form>
                             </div>
-                            <!-- select-Categories End -->
-
-                            <!-- Range Slider Start -->
+                            <div class="select-job-items2 mb-30">
+                                <div class="col-xl-12">
+                                    <select name="select2">
+                                        <option value="">Genres</option>
+                                        <option value="">History</option>
+                                        <option value="">Horror - Thriller</option>
+                                        <option value="">Love Stories</option>
+                                        <option value="">Science Fiction</option>
+                                        <option value="">Biography</option>
+                                    </select>
+                                </div>
+                            </div>
                             <aside class="left_widgets p_filter_widgets price_rangs_aside sidebar_box_shadow mb-40">
                                 <div class="small-tittle">
                                     <h4>Filter by Price</h4>
@@ -181,76 +173,10 @@
                                 </div>
                             </aside>
                             <!-- range end -->
-
+                             <div class="d-flex justify-content-center">
+                                <a href="search.html" class="btn header-btn">Search</a>
+                             </div>
                             <!-- Select City items start -->
-                            <div class="select-job-items2 mb-30">
-                                <div class="col-xl-12">
-                                    <select name="select2">
-                                        <option value="">Filter by Rating</option>
-                                        <option value="">5 Star Rating</option>
-                                        <option value="">4 Star Rating</option>
-                                        <option value="">3 Star Rating</option>
-                                        <option value="">2 Star Rating</option>
-                                        <option value="">1 Star Rating</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <!--  Select City items End-->
-
-                            <!-- select-Categories start -->
-                            <div class="select-Categories pt-100 pb-60">
-                                <div class="small-tittle mb-20">
-                                    <h4>Filter by Publisher</h4>
-                                </div>
-                                <label class="container">Green Publications
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Anondo Publications
-                                    <input type="checkbox" checked="checked active">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Rinku Publications
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Sheba Publications
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Red Publications
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                            <!-- select-Categories End -->
-                            <!-- select-Categories start -->
-                            <div class="select-Categories">
-                                <div class="small-tittle mb-20">
-                                    <h4>Filter by Author Name</h4>
-                                </div>
-                                <label class="container">Buster Hyman
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Phil Harmonic
-                                    <input type="checkbox" checked="checked active">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Cam L. Toe
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Otto Matic
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Juan Annatoo
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                            <!-- select-Categories End -->
                         </div>
                     </div>
                     <!-- Job Category Listing End -->
@@ -617,18 +543,18 @@
                     <nav class="blog-pagination justify-content-center d-flex">
                         <ul class="pagination">
                             <li class="page-item">
-                                <a href="#" class="page-link" aria-label="Previous">
+                                <a href="categories-2.html" class="page-link" aria-label="Previous">
                                     <i class="ti-angle-left"></i>
                                 </a>
                             </li>
                             <li class="page-item">
-                                <a href="#" class="page-link">1</a>
+                                <a href="categories-2.html" class="page-link">1</a>
                             </li>
                             <li class="page-item active">
-                                <a href="#" class="page-link">2</a>
+                                <a href="categories-2.html" class="page-link">2</a>
                             </li>
                             <li class="page-item">
-                                <a href="#" class="page-link" aria-label="Next">
+                                <a href="categories-2.html" class="page-link" aria-label="Next">
                                     <i class="ti-angle-right"></i>
                                 </a>
                             </li>
@@ -693,11 +619,11 @@
                        <div class="footer-tittle">
                            <h4>Book Category</h4>
                            <ul>  
-                               <li><a href="#">History</a></li>
-                               <li><a href="#">Horror - Thriller</a></li>
-                               <li><a href="#">Love Stories</a></li>
-                               <li><a href="#">Science Fiction</a></li>
-                               <li><a href="#">Business</a></li>
+                               <li><a href="categories.html">History</a></li>
+                               <li><a href="categories.html">Horror - Thriller</a></li>
+                               <li><a href="categories.html">Love Stories</a></li>
+                               <li><a href="categories.html">Science Fiction</a></li>
+                               <li><a href="categories.html">Business</a></li>
                            </ul>
                        </div>
                    </div>
