@@ -37,7 +37,7 @@
                             <div class="header-info-left d-flex align-items-center">
                                 <!-- logo -->
                                 <div class="logo">
-                                    <a href="index-2.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
                                 </div>
                                 <!-- Search Box -->
                                 <form action="search1.html" class="form-box">
@@ -51,9 +51,9 @@
                             <div class="header-info-right d-flex align-items-center">
                                 <ul>                                   
                                     <li><a href="#">FAQ</a></li>
-                                    <li><a href="#">Track Order</a></li>
+                                    <li><a onclick="remind()">History Order</a></li>
                                     <li class="shopping-card">
-                                        <a href="cart.html"><img src="assets/img/icon/cart.svg" alt=""></a>
+                                        <a onclick="remind()"><img src="assets/img/icon/cart.svg" alt=""></a>
                                     </li>
                                     <li><a href="login.html" class="btn header-btn">Sign in</a></li>
                                 </ul>
@@ -69,19 +69,19 @@
                 <div class="col-xl-12">
                     <!-- logo 2 -->
                     <div class="logo2">
-                        <a href="index-2.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
                     </div>
                     <!-- Main-menu -->
                     <div class="main-menu text-center d-none d-lg-block">
                         <nav>                                                
                             <ul id="navigation">    
-                                <li><a href="index-2.html">Home</a></li>
+                                <li><a href="index.html">Home</a></li>
                                 <li><a href="categories.html">Categories</a></li>
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="submenu">
                                         <li><a href="login.html">login</a></li>
-                                        <li><a href="cart.html">Cart</a></li>
+                                        <li><a onclick="remind()">Cart</a></li>
                                         <li><a href="checkout.html">Checkout</a></li>
                                         <li><a href="book-details.html">book Details</a></li>
                                         <li><a href="blog_details.html">Blog Details</a></li>
@@ -89,7 +89,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Contect</a></li>
+                                <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -133,7 +133,7 @@
                                         </div>
                                         <p>(120 Review)</p>
                                     </div>
-                                    <div class="white-btn mr-10 add-to-cart">Add to Cart</div>
+                                    <div onclick="remind()" class="white-btn mr-10 add-to-cart">Add to Cart</div>
                                     <a href="#" class="border-btn share-btn"><i class="fas fa-share-alt"></i></a>
                                 </div>
                             </div>
@@ -145,13 +145,13 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <!-- <div class="col-sm-12">
                 <div class="thong-bao">
                     <div>
                         Book added to cart
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- services-area End-->
@@ -262,7 +262,7 @@
                            <div class="single-footer-caption mb-30">
                                <!-- logo -->
                                <div class="footer-logo mb-25">
-                                   <a href="index-2.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                   <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
                                </div>
                                <div class="footer-tittle">
                                    <div class="footer-pera">
@@ -387,6 +387,12 @@
   gtag('config', 'UA-23581568-13');
 </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8dc15baa19bca906","version":"2024.10.4","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"cd0b4b3a733644fc843ef0b185f98241","b":1}' crossorigin="anonymous"></script>
+
+<script>
+    function remind() {
+        alert("You are not logged in yet !!!");
+      }
+</script>
 </body>
 
 <!-- Mirrored from preview.colorlib.com/theme/abcbook/book-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Nov 2024 04:25:35 GMT -->
