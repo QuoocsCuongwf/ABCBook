@@ -41,11 +41,11 @@
         function toggleLockStatus(checkbox, rowId) {
       const statusCell = document.getElementById(`status-${rowId}`);
       if (checkbox.checked) {
-        statusCell.textContent = "Khóa";
+        statusCell.textContent = "Locked";
         statusCell.classList.add("locked");
         statusCell.classList.remove("active");
       } else {
-        statusCell.textContent = "Hoạt động";
+        statusCell.textContent = "Active";
         statusCell.classList.add("active");
         statusCell.classList.remove("locked");
       }
@@ -138,33 +138,33 @@
                                 <h1 style="color: red;">Customer Management</h1>
                             </div>
                             <div class="search-box" >
-                                <input type="text" placeholder="Tìm kiếm khách hàng...">
+                                <input type="text" placeholder="Search...">
                                 <i class="ti-search"></i>
                             </div>
                         </div>
                             <table id="customer-table">
                                 <thead>
                                     <tr>
-                                        <th>Trạng thái</th>
-                                        <th>Mã khách hàng</th>
-                                        <th>Tên khách hàng</th>
-                                        <th>Số điện thoại</th>
+                                        <th>Status</th>
+                                        <th>Id Customer</th>
+                                        <th>Customer Name</th>
+                                        <th>Phone Number</th>
                                         <th>Email</th>
-                                        <th>Địa chỉ</th>
-                                        <th>Chức năng</th>
-                                        <th>Khóa</th>
+                                        <th>Address</th>
+                                        <th>Actions</th>
+                                        <th>Lock</th>
                                     </tr>
                                 </thead>
                                 <tbody id="customer-table">
                                     <tr>
-                                        <td id="status-1" class="status active">Hoạt động</td>
+                                        <td id="status-1" class="status active">Active</td>
                                         <td>#Kh001</td>
                                         <td>Nguyen Van Khanh</td>
                                         <td>0123456789</td>
                                         <td>khanh@gmail.com</td>
                                         <td>C11/34D</td>
                                         <td>
-                                             <a style="color: rgba(0, 0, 255, 0.619);" href="#" onclick="openEditPopup('#Kh001', 'Nguyen Van Khanh','0123456789', 'nguyenvana@gmail.com', 'C11/34D')">Chỉnh Sửa</a>
+                                             <a style="color: rgba(0, 0, 255, 0.619);" href="#" onclick="openEditPopup('#Kh001', 'Nguyen Van Khanh','0123456789', 'nguyenvana@gmail.com', 'C11/34D')">Edit</a>
                                         </td>
                                         <td>
                                             <!-- Checkbox để khóa/mở khóa -->
@@ -172,14 +172,14 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td id="status-2" class="status active">Hoạt động</td>
+                                        <td id="status-2" class="status active">Active</td>
                                         <td>#Kh002</td>
                                         <td>Nguyen Van Khoi</td>
                                         <td>0987654321</td>
                                         <td>khoi@gmail.com</td>
                                         <td>C12/35F</td>
                                         <td>
-                                             <a style="color: rgba(0, 0, 255, 0.619);" href="#" onclick="openEditPopup('#Kh002', 'Nguyen Van Khoi', '0987654321', 'khoi@gmail.com', 'C12/35F')">Chỉnh Sửa</a>
+                                             <a style="color: rgba(0, 0, 255, 0.619);" href="#" onclick="openEditPopup('#Kh002', 'Nguyen Van Khoi', '0987654321', 'khoi@gmail.com', 'C12/35F')">Edit</a>
                                         </td>
                                         <td>
                                             <!-- Checkbox để khóa/mở khóa -->
@@ -187,14 +187,14 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td  id="status-3" class="status active">Hoạt động</td>
+                                        <td  id="status-3" class="status active">Active</td>
                                         <td>#Kh003</td>
                                         <td>Nguyen Thi Thanh</td>
                                         <td>0987654321</td>
                                         <td>Thanh@gmail.com</td>
                                         <td>C12/35F</td>
                                         <td>
-                                             <a style="color: rgba(0, 0, 255, 0.619);" href="#" onclick="openEditPopup('#Kh003', 'Nguyen Thi Thanh', '0987654321', 'Thanh@gmail.com', 'C12/35F')">Chỉnh Sửa</a>
+                                             <a style="color: rgba(0, 0, 255, 0.619);" href="#" onclick="openEditPopup('#Kh003', 'Nguyen Thi Thanh', '0987654321', 'Thanh@gmail.com', 'C12/35F')">Edit</a>
                                         </td>
                                         <td>
                                             <!-- Checkbox để khóa/mở khóa -->
@@ -202,14 +202,14 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td  id="status-4" class="status active">Hoạt động</td>
+                                        <td  id="status-4" class="status active">Active</td>
                                         <td>#Kh004</td>
                                         <td>Nguyen Thi Nga</td>
                                         <td>0987654321</td>
                                         <td>Nga@gmail.com</td>
                                         <td>C12/35F</td>
                                         <td>
-                                             <a style="color: rgba(0, 0, 255, 0.619);" href="#" onclick="openEditPopup('#Kh004', 'Nguyen Thi Nga', '0987654321', 'Nga@gmail.com', 'C12/35F')">Chỉnh Sửa</a>
+                                             <a style="color: rgba(0, 0, 255, 0.619);" href="#" onclick="openEditPopup('#Kh004', 'Nguyen Thi Nga', '0987654321', 'Nga@gmail.com', 'C12/35F')">Edit</a>
                                         </td>
                                         <td>
                                             <!-- Checkbox để khóa/mở khóa -->
@@ -217,14 +217,14 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td id="status-5" class="status active">Hoạt động</td>
+                                        <td id="status-5" class="status active">Active</td>
                                         <td>#Kh005</td>
                                         <td>Nguyen Cao Khanh Vy</td>
                                         <td>0987654321</td>
                                         <td>khanhvy@gmail.com</td>
                                         <td>C12/35F</td>
                                         <td>
-                                             <a  style="color: rgba(0, 0, 255, 0.619);" href="#" onclick="openEditPopup('#Kh005', 'Nguyen Cao Khanh Vy', '0987654321', 'khanhvy@gmail.com', 'C12/35F')">Chỉnh Sửa</a>
+                                             <a  style="color: rgba(0, 0, 255, 0.619);" href="#" onclick="openEditPopup('#Kh005', 'Nguyen Cao Khanh Vy', '0987654321', 'khanhvy@gmail.com', 'C12/35F')">Edit</a>
                                         </td>
                                         <td>
                                             <!-- Checkbox để khóa/mở khóa -->
@@ -232,57 +232,57 @@
                                         </td>
                                     </tr>
                                 </tbody>
-                                 <!-- Cửa sổ nổi chỉnh sửa -->
+                                 <!-- Cửa sổ nổi Edit -->
                                 <div class="popup" id="popup">
                                     <div class="popup-content">
-                                    <h2 style="color: red;">Chỉnh Sửa Thông Tin Khách Hàng</h2>
+                                    <h2 style="color: red;">Edit Customer</h2>
                                     <form>
                                         <label for="customerId">ID:</label>
                                         <input type="text" id="customerId" disabled>
 
-                                        <label for="name">Họ Tên:</label>
-                                        <input type="text" id="name" placeholder="Nhập họ tên">
+                                        <label for="name">Name:</label>
+                                        <input type="text" id="name" placeholder="Enter name">
 
-                                        <label for="phone">Số Điện Thoại:</label>
-                                        <input type="text" id="phone" placeholder="Nhập số điện thoại">
+                                        <label for="phone">Phone Number:</label>
+                                        <input type="text" id="phone" placeholder="Enter phone number">
 
                                         <label for="email">Email:</label>
-                                        <input type="email" id="email" placeholder="Nhập email">
+                                        <input type="email" id="email" placeholder="Enter email">
 
                                         <label for="address">Address:</label>
-                                        <input type="address" id="address" placeholder="Nhập địa chỉ">
+                                        <input type="address" id="address" placeholder="Enter address">
 
                                         <div class="popup-actions">
-                                        <a href="#" onclick="closeEditPopup()" class="cancel-link">Hủy</a>
-                                        <a href="#" onclick="closeEditPopup()" class="confirm-link">Xác Nhận</a>
+                                        <a href="#" onclick="closeEditPopup()" class="cancel-link">Cancel</a>
+                                        <a href="#" onclick="closeEditPopup()" class="confirm-link">Save</a>
                                         </div>
                                     </form>
                                     </div>
                                 </div>
                                  <!-- Nút thêm khách hàng -->
                                 <div class="add-customer">
-                                    <a href="#" onclick="openAddCustomerPopup()" class="add-customer-btn">+ Thêm</a>
+                                    <a href="#" onclick="openAddCustomerPopup()" class="btn">+ Add</a>
                                 </div>
                                 <!-- Popup thêm khách hàng -->
                                 <div class="popup" id="add-popup">
                                     <div class="popup-content">
-                                    <h2 style="color: red;">Thêm Khách Hàng</h2>
+                                    <h2 style="color: red;">Add Customer</h2>
                                     <form>
-                                        <label for="add-name">Họ Tên:</label>
-                                        <input type="text" id="add-name" placeholder="Nhập họ tên">
+                                        <label for="add-name">Name:</label>
+                                        <input type="text" id="add-name" placeholder="Enter name">
 
-                                        <label for="add-phone">Số Điện Thoại:</label>
-                                        <input type="text" id="add-phone" placeholder="Nhập số điện thoại">
+                                        <label for="add-phone">Phone Number:</label>
+                                        <input type="text" id="add-phone" placeholder="Enter phone number">
 
                                         <label for="add-email">Email:</label>
-                                        <input type="email" id="add-email" placeholder="Nhập email">
+                                        <input type="email" id="add-email" placeholder="Enter email">
 
-                                        <label for="add-phone">Địa chỉ:</label>
-                                        <input type="text" id="add-address" placeholder="Nhập địa chỉ">
+                                        <label for="add-phone">Address:</label>
+                                        <input type="text" id="add-address" placeholder="Enter address">
 
                                         <div class="popup-actions">
-                                        <a href="#" onclick="closeAddCustomerPopup()" class="cancel-link">Hủy</a>
-                                        <a href="#" onclick="closeAddCustomerPopup()" class="confirm-link">Thêm</a>
+                                        <a href="#" onclick="closeAddCustomerPopup()" class="cancel-link">Cancel</a>
+                                        <a href="#" onclick="closeAddCustomerPopup()" class="confirm-link">Add</a>
                                         </div>
                                     </form>
                                     </div>
