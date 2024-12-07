@@ -367,7 +367,7 @@ function addProduct(event) {
                 genre: genre
             };
             products.push(product);
-            renderProducts();
+        //    renderProducts();
         };
         reader.readAsDataURL(image);
     } else {
@@ -383,7 +383,7 @@ function addProduct(event) {
             genre: genre
         };
         products.push(product);
-        renderProducts();
+        //renderProducts();
     }
 
     // Reset the form after adding a product
@@ -463,7 +463,7 @@ function updateProduct(index) {
                 review: review,
                 genre: genre
             };
-            renderProducts();
+ //           renderProducts();
         };
         reader.readAsDataURL(image);
     } else {
@@ -478,7 +478,7 @@ function updateProduct(index) {
             review: review,
             genre: genre
         };
-        renderProducts();
+   //     renderProducts();
     }
 
     document.getElementById("addProductForm").reset();
