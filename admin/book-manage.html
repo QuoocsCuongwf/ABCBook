@@ -11,6 +11,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/icon/favicon.png">
 
     <!-- CSS here -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="assets/css/addbook.css"> 
     <link rel="stylesheet" href="assets/css/booklist.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -94,7 +95,7 @@
                             <a href="customer.html"><i class='bx bxs-user'></i>Customer</a>
                         </li>
                         <li>
-                            <a href=""><i class='bx bxs-book'></i>Book</a>
+                            <a href="book-manage.html"><i class='bx bxs-book'></i>Book</a>
                         </li>
                     </ul>
                 </div>
@@ -289,7 +290,7 @@ closeForm.addEventListener('click',()=>{
 let products = [
     {
         name: "The Rage of Dragons",
-        price: 50.00,
+        price: 320.00,
         image: "assets/img/gallery/best-books1.jpg",
         author: "Evan Winter",
         description: "This is a sample book description.",
@@ -300,7 +301,7 @@ let products = [
     },
     {
         name: "Moon Dance",
-        price: 50.00,
+        price: 320.00,
         image: "assets/img/gallery/best_selling1.jpg",
         author: "Moon Dance",
         description: "This is a sample book description.",
@@ -311,7 +312,7 @@ let products = [
     },
     {
         name: "Very Nice",
-        price: 50.00,
+        price: 320.00,
         image: "assets/img/gallery/best_selling2.jpg",
         author: "Moon Dance",
         description: "This is a sample book description.",
@@ -322,7 +323,7 @@ let products = [
     },
     {
         name: "Evanesce",
-        price: 50.00,
+        price: 320.00,
         image: "assets/img/gallery/best_selling3.jpg",
         author: "Moon Dance",
         description: "This is a sample book description.",
@@ -400,9 +401,9 @@ function renderProducts() {
 
         // Display only name, price, and image for each book
         li.innerHTML = `
-            ${product.image ? `<img src="${product.image}" alt="${product.name}" style="width: 200px; height: auto;">` : ''}
+            ${product.image ? `<img src="${product.image}" alt="${product.name}" style="width: 150px; height: auto;">` : ''}
             <p class="name">${product.name}</p> 
-            <p class="price"> ${product.price} </p>
+            <p class="price"> ${product.price}$ </p>
             <a href="book-details-2.html" class="btn" target="_blank">Details</a>
             <a href="book.html" class="btn" onclick="editProduct(${index})">Edit</a>
             <button class="btn" onclick="deleteProduct(${index})">Delete</button>
