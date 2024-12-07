@@ -106,48 +106,43 @@
             </div>
         </div>
     </div>
-    <div class="container" id="edit-form">
+    <div class="container" id="edit-form" style="height: 1250px;">
         <div class="row">
             <div class="add-book col-sm-12">
-                <form action="" class="d-flex flex-column justify-content-center">
-                    <ul>
-                        <li class="form-group">
-                            <div class="col-md-6">
-                                <input type="file" name="image" id="image">
-                        </li>
-                        <li>
-                            <input type="text" class="book-name" placeholder="The Rage of Dragons" name="book-name" id="book-name">
-                            <input type="number" name="price" id="price" placeholder="60$">
-                        </li>
-                        <li>
-                            <select class="genres">
-                                <option value="1">History</option>
-                                <option value="2">Horror - Thriller</option>
-                                <option value="3">Biography</option>
-                                <option value="4">love Stories</option>
-                                <option value="5">Science Fiction</option>
-                            </select>
-                        </li>
-                        <li>
-                            <input type="text" name="author" id="author" placeholder="Evan Winter">
-                        </li>
-                        <li>
-                            <textarea name="description" id="description" placeholder="Description"></textarea>
-                        </li>
-                        <li>
-                            <textarea name="infor-author" id="infor-author" placeholder="Author"></textarea>
-                        </li>
-                        <li>
-                            <textarea name="comments" id="comments" placeholder="Comment"></textarea>
-                        </li>
-                        <li>
-                            <textarea name="review" id="review" placeholder="Review"></textarea>
-                        </li>
-                        <li>
-                            <input type="submit" value="Save book" class="btn">
-                        </li>
-                    </ul>
-                </form>
+                <form action="" class="d-flex flex-column justify-content-center" style="display: flex; flex-direction: column; position:absolute; left: 50%;  transform: translateX(-50%); ">
+                    <label for="book-name">Book's Title: </label>
+                    <input type="text" id="book-name" required value="The Rage of Dragons"><br>
+                    <label for="author">Author: </label>
+                    <input type="text" id="author" required value="Evan Winter"><br>
+                    <label for="price">Price: </label>
+                    <input type="number" id="price" required value=60><br>
+                    <label for="genres">Genre: </label>
+                    <select id="genres"value="1"x
+                    <option value="1">History</option>
+                    <option value="2">Horror - Thriller</option>
+                    <option value="3">Biography</option>
+                    <option value="4">Love Stories</option>
+                    <option value="5">Science Fiction</option>
+                </select><br>
+                
+            
+                <label for="image">Book's Cover: </label>
+                <input type="file" id="image" class="full-width"><br>
+                <img src="assets/img/gallery/best-books1.jpg" alt="" style="width: 100px; height: auto;">
+                <label for="description">Description: </label>
+                <textarea id="description" class="full-width" ></textarea><br>
+            
+                <label for="infor-author">Author Info: </label>
+                <textarea id="infor-author" class="full-width"></textarea><br>
+            
+                <label for="comments">Comments: </label>
+                <textarea id="comments" class="full-width"></textarea><br>
+            
+                <label for="review">Review: </label>
+                <textarea id="review" class="full-width"></textarea><br>
+            
+                <button type="submit" class="btn" id="close-form">Add Book</button>
+            </form>
             </div>
         </div>
     </div>
