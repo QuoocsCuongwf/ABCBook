@@ -414,7 +414,12 @@
     <!-- JS here -->
      <script>
          function thongBao() {
-        alert('Deleted Customer successfully');
+        b=confirm('Are you sure you want to delete this customer?');
+        if(b){
+            alert('Deleted Customer successfully');
+        } else {
+            alert('Canceled');
+        }
       }
      </script>
     <!-- Jquery, Popper, Bootstrap -->
