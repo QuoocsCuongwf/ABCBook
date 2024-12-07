@@ -294,3 +294,10 @@
 
 
 })(jQuery);
+
+const save = document.getElementById('save-book');
+
+save.addEventListener('click', function() {
+  alert('Book saved successfully');
+}
+)
