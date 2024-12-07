@@ -488,6 +488,7 @@ function updateProduct(index) {
 function deleteProduct(index) {
     const confirmDelete = confirm("Are you sure you want to delete this book?");
     if (confirmDelete) {
+        alert("Book deleted successfully!");
         products.splice(index, 1);
 //        renderProducts();
     }

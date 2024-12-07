@@ -161,6 +161,7 @@
                                         <td>C11/34D</td>
                                         <td>
                                              <a style="color: rgba(0, 0, 255, 0.619);" href="#" onclick="openEditPopup('#Kh001', 'Nguyen Van Khanh','0123456789', 'nguyenvana@gmail.com', 'C11/34D')">Edit</a>
+                                             <a href="" onclick="thongBao()" style="color: rgba(0, 0, 255, 0.619);">Delete</a>
                                         </td>
                                         <td>
                                             <!-- Checkbox để khóa/mở khóa -->
@@ -176,6 +177,7 @@
                                         <td>C12/35F</td>
                                         <td>
                                              <a style="color: rgba(0, 0, 255, 0.619);" href="#" onclick="openEditPopup('#Kh002', 'Nguyen Van Khoi', '0987654321', 'khoi@gmail.com', 'C12/35F')">Edit</a>
+                                             <a href="" onclick="thongBao()"  style="color: rgba(0, 0, 255, 0.619);">Delete</a>
                                         </td>
                                         <td>
                                             <!-- Checkbox để khóa/mở khóa -->
@@ -191,6 +193,7 @@
                                         <td>C12/35F</td>
                                         <td>
                                              <a style="color: rgba(0, 0, 255, 0.619);" href="#" onclick="openEditPopup('#Kh003', 'Nguyen Thi Thanh', '0987654321', 'Thanh@gmail.com', 'C12/35F')">Edit</a>
+                                             <a href="" onclick="thongBao()" style="color: rgba(0, 0, 255, 0.619);">Delete</a>
                                         </td>
                                         <td>
                                             <!-- Checkbox để khóa/mở khóa -->
@@ -206,10 +209,11 @@
                                         <td>C12/35F</td>
                                         <td>
                                              <a style="color: rgba(0, 0, 255, 0.619);" href="#" onclick="openEditPopup('#Kh004', 'Nguyen Thi Nga', '0987654321', 'Nga@gmail.com', 'C12/35F')">Edit</a>
+                                             <a href="" onclick="thongBao()"style="color: rgba(0, 0, 255, 0.619);">Delete</a>
                                         </td>
                                         <td>
                                             <!-- Checkbox để khóa/mở khóa -->
-                                            <input type="checkbox" onchange="toggleLockStatus(this, 4)">
+                                            <input  type="checkbox" onchange="toggleLockStatus(this, 4)">
                                         </td>
                                     </tr>
                                     <tr>
@@ -221,6 +225,7 @@
                                         <td>C12/35F</td>
                                         <td>
                                              <a  style="color: rgba(0, 0, 255, 0.619);" href="#" onclick="openEditPopup('#Kh005', 'Nguyen Cao Khanh Vy', '0987654321', 'khanhvy@gmail.com', 'C12/35F')">Edit</a>
+                                             <a href=""onclick="thongBao()" style="color: rgba(0, 0, 255, 0.619);">Delete</a>
                                         </td>
                                         <td>
                                             <!-- Checkbox để khóa/mở khóa -->
@@ -407,6 +412,11 @@
     </div>
 
     <!-- JS here -->
+     <script>
+         function thongBao() {
+        alert('Deleted Customer successfully');
+      }
+     </script>
     <!-- Jquery, Popper, Bootstrap -->
     <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
