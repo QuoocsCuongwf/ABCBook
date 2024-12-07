@@ -152,7 +152,6 @@
                                     <td>Processing</td>
                                     <td class="order-actions">
                                         <a href="oder.html">View Oder Detail</a>
-                                        <a href="#">Delete</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -165,7 +164,6 @@
                                     <td>Completed</td>
                                     <td class="order-actions">
                                         <a href="oder.html">View Oder Detail</a>
-                                        <a href="#">Delete</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -178,7 +176,6 @@
                                     <td>Completed</td>
                                     <td class="order-actions">
                                         <a href="oder.html">View Oder Detail</a>
-                                        <a href="#">Delete</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -191,7 +188,6 @@
                                     <td>Completed</td>
                                     <td class="order-actions">
                                         <a href="oder.html">View Oder Detail</a>
-                                        <a href="#">Delete</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -204,7 +200,6 @@
                                     <td>Completed</td>
                                     <td class="order-actions">
                                         <a href="oder.html">View Oder Detail</a>
-                                        <a href="#">Delete</a>
                                     </td>
                                 </tr><tr>
                                     <td>#1006</td>
@@ -216,7 +211,6 @@
                                     <td>Completed</td>
                                     <td class="order-actions">
                                         <a href="oder.html">View Oder Detail</a>
-                                        <a href="#">Delete</a>
                                     </td>
                                 </tr><tr>
                                     <td>#1007</td>
@@ -228,7 +222,6 @@
                                     <td>Completed</td>
                                     <td class="order-actions">
                                         <a href="oder.html">View Oder Detail</a>
-                                        <a href="#">Delete</a>
                                     </td>
                                 </tr><tr>
                                     <td>#1008</td>
@@ -240,7 +233,6 @@
                                     <td>Completed</td>
                                     <td class="order-actions">
                                         <a href="oder.html">View Oder Detail</a>
-                                        <a href="#">Delete</a>
                                     </td>
                                 </tr><tr>
                                     <td>#1009</td>
@@ -252,7 +244,6 @@
                                     <td>Completed</td>
                                     <td class="order-actions">
                                         <a href="oder.html">View Oder Detail</a>
-                                        <a href="#">Delete</a>
                                     </td>
                                 </tr><tr>
                                     <td>#1010</td>
@@ -264,7 +255,6 @@
                                     <td>Completed</td>
                                     <td class="order-actions">
                                         <a href="oder.html">View Oder Detail</a>
-                                        <a href="#">Delete</a>
                                     </td>
                                 </tr><tr>
                                     <td>#1011</td>
@@ -276,7 +266,6 @@
                                     <td>Completed</td>
                                     <td class="order-actions">
                                         <a href="oder.html">View Oder Detail</a>
-                                        <a href="#">Delete</a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -404,6 +393,15 @@
     </div>
     
     <!-- JS here -->
+    <script>
+        function thongBao() {
+       b=confirm('Are you sure you want to delete this customer?');
+       if(b){
+           alert('Deleted Customer successfully');
+       } else {
+           alert('Canceled');
+       }
+     }
     <!-- Jquery, Popper, Bootstrap -->
     <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
