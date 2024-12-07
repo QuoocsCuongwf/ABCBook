@@ -304,7 +304,7 @@ buy.addEventListener('click', () => {
     <div>
     <h2>Thank you for your purchase</h2>
     <a href="index-2.html" class="btn" style="margin-top: 40px">Back to Home</a>
-    <a href="history-order.html" class="btn" style="margin-top: 40px">History Order</a>
+    <a href="history-order.html" class="btn" style="margin-top: 40px">Orders History</a>
     </div>
   `;
 });
